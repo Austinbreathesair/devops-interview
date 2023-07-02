@@ -1,0 +1,17 @@
+- name: Modify Operating SYstem settings
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create system-wide aliases
+      blockinfile: /etc/bash/bashrc
+      block: | 
+        alias d='docker'
+        alias dc='docker compose'
+
+    - name: Create topsecret file
+      copy:
+        content: t0ps3cr3t
+        dest: /etc/topsecret.txt
+        owner: root
+        group: root
+        mode: '0400'

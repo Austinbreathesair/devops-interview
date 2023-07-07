@@ -1,4 +1,4 @@
-FROM gradle:6.8.3-jdk8 AS build
+FROM gradle:7.3.0-jdk17 AS build
 
 COPY build.gradle .
 

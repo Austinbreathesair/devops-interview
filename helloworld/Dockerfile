@@ -4,7 +4,7 @@ FROM gradle:6.8.3-jdk8 AS build
 
 COPY build.gradle .
 
-COPY settings.gradle
+COPY settings.gradle .
 
 COPY src ./src
 

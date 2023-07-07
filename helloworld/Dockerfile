@@ -8,7 +8,7 @@ COPY src ./src
 
 RUN gradle clean build -x test
 
-FROM openjdk:8-jdk-alpine
+FROM openjdk:17-jdk-alpine
 
 LABEL maintainer="austinbreathesair@gmail.com"
 

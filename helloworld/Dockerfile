@@ -19,7 +19,7 @@ EXPOSE 8080
 # STEP 1: Add the executable jar file in this container
 RUN mkdir -p /build/libs/
 
-RUN ls /build
+RUN ls /build/libs/
 
 COPY build /build/libs/
 

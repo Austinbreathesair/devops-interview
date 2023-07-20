@@ -27,4 +27,4 @@ COPY ./build/libs/helloworld.jar ./build/libs/helloworld.jar
 
 # STEP 2: Run the application when the container starts
 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/helloworld.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","./build/libs/helloworld.jar"]

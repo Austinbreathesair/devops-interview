@@ -18,7 +18,7 @@ EXPOSE 8080
 
 # STEP 1: Add the executable jar file in this container
 
-ADD helloworld.jar /build/libs/helloworld.jar
+ADD helloworld.jar ./build/libs/helloworld.jar
 
 # STEP 2: Run the application when the container starts
 

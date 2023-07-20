@@ -2,11 +2,6 @@
   hosts: localhost
   become: yes
   tasks:
-    - name: Update apt cache
-      apt:
-        update_cache: yes
-        cache_valid_time: 3600
-
     - name: Install required sysem packages
       apt:
         name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']

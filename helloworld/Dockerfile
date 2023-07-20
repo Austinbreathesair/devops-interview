@@ -17,9 +17,9 @@ VOLUME /tmp
 EXPOSE 8080
 
 # STEP 1: Add the executable jar file in this container
-RUN mkdir ./build/libs/
+RUN mkdir /build/libs/
 
-ADD helloworld.jar ./build/libs/
+ADD helloworld.jar /build/libs/
 
 # STEP 2: Run the application when the container starts
 

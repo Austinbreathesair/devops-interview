@@ -6,7 +6,7 @@ COPY settings.gradle .
 
 COPY src ./src
 
-RUN gradle clean build -x test
+RUN ./gradlew clean build
 
 FROM openjdk:17-jdk-alpine
 
@@ -23,7 +23,7 @@ COPY build ./build
 
 RUN ls ./build/
 
-COPY helloworld.jar ./build/libs/
+COPY ./build/libs/helloworld.jar ./build/libs/helloworld.jar
 
 # STEP 2: Run the application when the container starts
 

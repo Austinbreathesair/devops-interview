@@ -18,7 +18,7 @@ EXPOSE 8080
 
 # STEP 1: Add the executable jar file in this container
 
-ARG JAR_FILE=build/libs/
+ARG JAR_FILE=build/libs
 
 ADD ${JAR_FILE} helloworld.jar
 

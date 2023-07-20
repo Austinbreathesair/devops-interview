@@ -7,11 +7,6 @@
         name: ['apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']
         state: present
 
-    - name: Add Docker official GPG key
-      apt_repository:
-        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
-        state: present
-
     - name: Install Docker
       apt: 
         name: docker ce

@@ -21,9 +21,9 @@ RUN mkdir -p /build/libs/
 
 RUN ls /build
 
-COPY build ./build/libs/
+COPY build /build/libs/
 
-COPY ./build/libs/helloworld.jar ./build/libs/helloworld.jar
+COPY /build/libs/helloworld.jar /build/libs/helloworld.jar
 
 # STEP 2: Run the application when the container starts
 

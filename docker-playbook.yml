@@ -41,3 +41,10 @@
        command: "{{ container_command }}"
        state: present
      with_sequence: count={{ containers }}
+
+   - name: Ensure Docker service is running
+     systemd:
+       name: docker
+       state: started
+       enabled: yes
+       
